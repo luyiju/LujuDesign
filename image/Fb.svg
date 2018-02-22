@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Fb</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="1440" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-117.000000, -713.000000)">
+        <g id="Fb" transform="translate(117.000000, 713.000000)">
+            <circle id="Oval-2" fill="#000000" cx="10.5" cy="10.5" r="10.5"></circle>
+            <path d="M11.5,9 L13.5,9 L13.25,10.875 L11.5,10.875 L11.5,16.5 L8.90625,16.5 L8.90625,10.875 L7.5,10.875 L7.5,9 L8.90625,9 L8.90625,7.74023438 C8.90625,6.91991777 9.12499781,6.29980679 9.5625,5.87988281 C10.0000022,5.45995884 10.7291616,5.25 11.75,5.25 L13.5,5.25 L13.5,7.125 L12.4375,7.125 C12.0416647,7.125 11.7864589,7.18359316 11.671875,7.30078125 C11.5572911,7.41796934 11.5,7.61327988 11.5,7.88671875 L11.5,9 Z" id="ion-social-facebook---Ionicons" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

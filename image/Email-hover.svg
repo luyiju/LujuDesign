@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Email-hover</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="1440" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-89.000000, -713.000000)">
+        <g id="Email-hover" transform="translate(89.000000, 713.000000)">
+            <circle id="Oval-2-Copy-2" fill="#FF432E" cx="10.5" cy="10.5" r="10.5"></circle>
+            <path d="M13.5,8.58247423 L13.5,7.5 L9.75,10.193299 L6,7.5 L6,8.58247423 L9.75,11.25 L13.5,8.58247423 Z M14.0390625,6.75 C14.3046888,6.75 14.5312491,6.85291813 14.71875,7.05875749 C14.9062509,7.26459684 15,7.50748363 15,7.78742515 L15,13.9625749 C15,14.2425164 14.9062509,14.4854032 14.71875,14.6912425 C14.5312491,14.8970819 14.3046888,15 14.0390625,15 L6.2109375,15 C5.94531117,15 5.71875094,14.8970819 5.53125,14.6912425 C5.34374906,14.4854032 5.25,14.2425164 5.25,13.9625749 L5.25,7.78742515 C5.25,7.50748363 5.34374906,7.26459684 5.53125,7.05875749 C5.71875094,6.85291813 5.94531117,6.75 6.2109375,6.75 L14.0390625,6.75 Z" id="email---material" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

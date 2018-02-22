@@ -1,0 +1,1498 @@
+/*
+
+Table of Contents
+
+- Import Fonts
+- General
+  - General Styles
+  - Selection
+  - Typography
+  - Buttons
+  - Modal
+- Site Navigation
+  - Menu
+- Portfolio Elements
+  - Background Last
+  - Background Content
+  - Fly Brush
+  - Main block
+  - Briefly block
+  - Projexts block
+  - Footer
+- About Elements
+
+- Helper Classes
+  - Margin
+
+*/
+
+@charset "UTF-8";
+
+
+
+
+/* ------------------------------------------------------------------
+Import Fonts
+------------------------------------------------------------------ */
+
+@import url('https://fonts.googleapis.com/css?family=Nunito|Open+Sans:700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@font-face {
+    font-family: Moon;
+    src: local(../font/Moon Bold.otf);
+    font-weight: bold;
+}
+
+
+
+/* ------------------------------------------------------------------
+General Styles
+------------------------------------------------------------------ */
+
+* {
+    /*    font-family: 'Open Sans', sans-serif;
+*/
+    letter-spacing: 0.01em;
+    line-height: 1.7;
+    border: none!important;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: scrollbar;
+    font: 14px/1.8, "Microsoft JhengHei", sans-serif;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+iframe {
+    border: 0;
+}
+
+
+body,
+input,
+textarea,
+select,
+button {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a:focus {
+    outline: 0;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+:focus {
+    outline: none;
+}
+
+
+
+
+
+
+/* ------------------------------------------------------------------
+Selection
+------------------------------------------------------------------ */
+
+::-moz-selection {
+    background: #ff432e;
+    color: #fff;
+}
+
+::-webkit-selection {
+    background: #ff432e;
+    color: #fff;
+}
+
+::selection {
+    background: #ff432e;
+    color: #fff;
+}
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------
+Typography
+------------------------------------------------------------------- */
+
+.text-black {
+    color: #000;
+}
+
+.text-light {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.text-light h1,
+.text-light h2,
+.text-light h3,
+.text-light h4,
+.text-light h5,
+.text-light h6,
+.text-light .h1,
+.text-light .h2,
+.text-light .h3,
+.text-light .h4,
+.text-light .h5,
+.text-light .h6 {
+    color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    line-height: 1.4;
+    font-weight: 400;
+    color: #111;
+}
+
+
+h1,
+.h1 {
+    font-size: 28px;
+}
+
+h2,
+.h2 {
+    font-size: 24px;
+}
+
+h3,
+.h3 {
+    font-size: 18px;
+}
+
+h4,
+.h4 {
+    font-size: 16px;
+}
+
+h5,
+.h5 {
+    font-size: 14px;
+}
+
+h6,
+.h6 {
+    font-size: 12px;
+}
+
+p,
+ol,
+ul,
+blockquote {
+    margin: 0 0 10px;
+}
+
+blockquote {
+    border-color: #f7f7f7;
+}
+
+blockquote.serif-quote {
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------
+Buttons
+------------------------------------------------------------------- */
+
+.btn {
+    width: auto;
+    font-size: 12px;
+    border-radius: 30px;
+    background-color: #ff432e;
+    color: #ffffff;
+    padding: 10px 20px;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+/* ------------------------------------------------------------------
+Modal
+------------------------------------------------------------------- */
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100;/* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    width: 80%;
+    margin: auto;
+    padding: 30px 100px;
+    background-color: #fefefe;
+    border: 1px solid #888;
+}
+
+.modal-text-box h1{
+    color: #ff432e;
+}
+
+.modal-text-box span{
+    margin: 50px auto;
+    font-size: 20px;
+}
+
+.modal-text {
+    color: #333;
+}
+
+/* The Close Button */
+.close {
+    color: #333;
+    float: right;
+    font-size: 30px!important;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* ------------------------------------------------------------------
+Site Navigation
+------------------------------------------------------------------ */
+/* Menu
+============================================= */
+
+.Menu-block {
+    padding: 5px 30px;
+    text-align: right;
+    border: 2px solid #002;
+}
+
+
+.overlay {
+    z-index: 100;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fdde40;
+    overflow-x: hidden;
+    transition: 0.5s ease-in;
+}
+
+.overlay-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    /*padding: 8px;*/
+    text-decoration: none;
+    font-family: Moon, Nunito;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #ff432e;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+
+.Nav-box {
+    padding: 20px;
+}
+
+.Nav-content {
+    margin: 50px auto;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+
+
+
+/* ------------------------------------------------------------------
+ Portfolio Elements
+------------------------------------------------------------------ */
+
+.Content-box {
+    height: 700px;
+    margin: 50px 50px;
+    background: #fdde40;
+    box-shadow: 0 2px 20px 0 #c1c0c0;
+}
+
+
+
+
+
+
+/* Background Last
+============================================= */
+
+.Block1-bg {
+    position: relative;
+    border: 2px solid #000;
+    background: url(../image/MainBanner-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+}
+
+.Block2-bg {
+    position: relative;
+    border: 2px solid #000;
+    background: url(../image/Briefly-bg.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+}
+
+.Block3-bg {
+    position: relative;
+    border: 2px solid #000;
+    background: url(../image/Projects-bg.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.Block4-bg {
+    position: relative;
+    border: 2px solid #000;
+    background: url(../image/About-bg.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* Background Content
+============================================= */
+
+.Bg-1 {
+    background: url(../image/Bg-1.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.Bg-2 {
+    background: url(../image/Bg-2.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.Bg-3 {
+    background: url(../image/Bg-3.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.Bg-4 {
+    background: url(../image/Bg-4.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+
+/* Fly Brush
+============================================= */
+
+.Fly-brush-size span img {
+    width: 80%;
+    height: auto;
+}
+
+
+
+/*Frist-block*/
+
+
+/*B-Up*/
+
+.a-1 {
+    position: absolute;
+    top:-50px;
+    left: 100px;
+}
+
+
+/*R-Down*/
+
+.a-2 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+
+/*R-Middle right*/
+
+.a-3 {
+    position: absolute;
+    top: 150px;
+    right: 200px;
+}
+
+
+/*B-down right*/
+
+.a-4 {
+    position: absolute;
+    bottom: -53px;
+    right: 150px;
+    z-index: 99;
+}
+
+
+
+/*Second-block*/
+
+
+/*B-Middle*/
+
+.b-1 {
+    position: absolute;
+    top: 250px;
+    left: 0px;
+}
+
+
+/*R-Up*/
+
+.b-2 {
+    position: absolute;
+    top: 250px;
+    right: 0px;
+    text-align: right;
+}
+
+
+/*B-Down right*/
+
+.b-3 {
+    position: absolute;
+    bottom: -100px;
+    right: 200px;
+    z-index: 99;
+}
+
+
+/*Third-block*/
+/*B-Down left*/
+.c-1 {
+    position: absolute;
+    bottom: 0px;
+    left: -10px;
+}
+/*T-Middle right*/
+.c-2 {
+    z-index: 99;
+    position: absolute;
+    top: 400px;
+    right: 80px;
+}
+/*R-Up*/
+.c-3 {
+    position: absolute;
+    top: -50px;
+    left: 100px;
+}
+/*XX-Up*/
+.c-4 {
+    position: absolute;
+    top: 100px;
+    left: 400px;
+}
+/*C-Up right*/
+.c-5 {
+    position: absolute;
+    top: 150px;
+    right: 450px;
+}
+
+
+
+/*Fourth-block*/
+
+
+/*T-Middle*/
+
+.d-1 {
+    position: absolute;
+    top: 450px;
+    left: 700px;
+}
+
+
+/*R-Left*/
+
+.d-2 {
+   /* z-index: 99;*/
+    position: absolute;
+    bottom: 550px;
+    left: -120px;
+}
+
+
+/*B-Right*/
+
+.d-3 {
+    position: absolute;
+    top: 400px;
+    right: 0px;
+}
+
+
+/* Main Block
+============================================= */
+
+.Main-block {
+    overflow: auto;
+    margin: 0px auto;
+    padding: 100px;
+    border: 2px solid #000;
+}
+
+.Main-title {
+    width: 50%;
+    height: auto;
+    margin: 0 0 0 150px;
+    padding: 0px;
+    text-align: right;
+    object-fit: contain;
+    border: 2px solid #ff432e;
+    z-index: 99;
+}
+
+.Subtitle {
+    margin: 200px 0;
+    font-family: Moon, Nunito;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2.4px;
+    text-align: right;
+    white-space: nowrap;
+    color: #4a4a4a;
+    border: 1px solid #222;
+}
+
+
+
+
+
+
+
+/* Briefly Block
+============================================= */
+
+.Briefly-block {
+    overflow: auto;
+    padding: 60px;
+    border: 2px solid #000;
+}
+
+.Briefly-box {
+    height: auto;
+    border: 2px solid #000;
+}
+
+
+.Briefly-box h3 {
+    font-family: Moon, Nunito;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff432e;
+    text-align: center;
+    margin: 0px 0px 30px 0px;
+}
+
+.Briefly-box p {
+    width: 700px;
+    font-size: 15px;
+    line-height: 2.0;
+    letter-spacing: 0.7px;
+    color: #000000;
+    margin: 0 auto;
+}
+
+.Briefly-box a {
+    margin: 50px 0 20px 0;
+}
+
+
+
+
+
+
+
+
+/* Skill
+============================================= */
+
+.Skill-box {
+    margin: 50px auto;
+    padding: 0 100px;
+}
+
+.Skill-box div {
+    border: 2px solid #000;
+    text-align: center;
+}
+
+.Skill-icon div {
+    font-family: Nunito;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+
+
+
+/* Projects
+============================================= */
+
+.Porjects-content-box {
+    min-height: 900px;
+    margin: 50px 56px;
+    padding: 0 0 100px 0;
+    background: #fdde40;
+    box-shadow: 0 2px 20px 0 #c1c0c0;
+}
+
+
+.Projects-block {
+    overflow: hidden;
+    padding: 60px;
+    border: 2px solid #d11;
+}
+
+.Projects-box {
+    width: 100%;
+}
+
+.Projects-title {
+    border: 2px solid #000;
+}
+
+.Projects-container {
+    overflow: auto;
+    border: 1px solid #fdde40!important;
+    border-radius: 3px;
+}
+
+
+/*Projects-filter-----------------------*/
+
+.Projects-filter {
+    margin: 25px 0 10px 0;
+    padding: 15px 0;
+    text-align: left;
+}
+
+.Projects-filter a {
+    display: inline-block;
+    margin: 6px auto;
+    padding: 4px 20px;
+    color: #666;
+    font-size: 13px;
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+}
+
+.Projects-filter a.current {
+    background: #ff432e;
+    border: 1px solid #ff432e;
+    color: #f9f9f9;
+}
+
+
+.Projects-item {
+    position: relative;
+    height: auto;
+    background-color: #fdde40;
+    border: 1px solid #000;
+    padding: 0;
+}
+
+.Projects-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 80px;
+    color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.Projects-cover h2 {
+    color: rgba(0, 0, 0, 0);
+}
+
+.Projects-item:hover .Projects-cover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.Projects-item:hover .Projects-cover h2 {
+    color: #fff;
+}
+
+.Projects-item:hover .Projects-cover p {
+    color: #fdde40;
+}
+
+.Projects-item a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.Projects-item a img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.isotope-item {
+    z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+
+.isotope,
+.isotope .isotope-item {
+    /* change duration value to whatever you like */
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
+
+
+/* Footer
+============================================= */
+
+footer {
+    height: 300px;
+    border: 2px solid #000;
+    background-image: url(../image/Footer-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.Contact-block {
+    padding: 0px;
+    border: 1px solid #f00;
+}
+
+.Contact-block ul {
+    display: inline-block;
+    overflow: auto;
+}
+
+.Contact-block li {
+    margin: 0 5px;
+    float: left;
+}
+
+.Contact-box {
+    margin: 10px 0 0 0;
+}
+
+.Contact-box h4 {
+    font-family: Moon, Nunito;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.Contact-box p {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #ff432e;
+}
+
+.Copyright p {
+    font-size: 12px;
+    color: #666;
+}
+
+
+
+
+/* ------------------------------------------------------------------
+About Page
+------------------------------------------------------------------ */
+
+.About-content {
+    width: 1000px;
+    height: auto;
+    margin: 0px auto;
+    padding: 0px;
+    overflow: auto;
+    border: 2px solid #f00;
+}
+
+.About-text-block {
+    border: 1px solid #000;
+}
+
+.About-photo {
+    border: 1px solid #000;
+}
+
+.Name {
+    margin: 20px 0 20px 0;
+}
+
+.Name h1 {
+    margin: 0 15px 0 0;
+    font-weight: 700;
+}
+
+.Name span {
+    margin: 0 0 0 10px;
+    font-family: Moon, Nunito;
+    color: #ff432e;
+}
+
+.About-text {
+    width: 500px;
+    height: auto;
+    overflow: auto;
+}
+
+.About-photo {
+    margin: 100px auto;
+    text-align: center;
+}
+
+.About-photo img {
+    width: 90%;
+}
+
+
+.Experience-box {
+    margin: 20px auto;
+    padding: 0 20px;
+    border-left: 2px solid #ff432e!important;
+}
+
+.Experience-box h5 {
+    margin: 5px auto;
+    font-weight: 700;
+    color: #ff432e;
+}
+
+.Experience-box p {
+    margin: 5px auto;
+    font-size: 13px;
+    color: #333;
+}
+
+
+.Download-cv {
+    margin: 30px auto;
+}
+
+
+
+
+/* ------------------------------------------------------------------
+Helper Classes
+------------------------------------------------------------------ */
+
+
+/* Margin
+============================================= */
+
+.m-a-0 {
+    margin: 0 0 !important;
+}
+
+
+
+
+/* Text Alignment
+============================================= */
+
+.text-xs-left {
+    text-align: left !important;
+}
+
+.text-xs-right {
+    text-align: right !important;
+}
+
+.text-xs-center {
+    text-align: center !important;
+}
+
+
+/* ------------------------------------------------------------------
+RWD
+------------------------------------------------------------------ */
+
+@media (min-width: 1500px) {
+        .Content-box {
+            min-height: 950px;
+        }
+}
+
+@media (max-width: 1400px) {}
+
+
+@media (max-width: 1200px) {
+   
+    .Subtitle {
+        margin: -100px auto;
+    }
+    /*Second-Content---------------------*/
+    .Second-Content {
+        height: auto;
+        padding: 10px;
+    }
+    /*Footer---------------------*/
+    .Skill-box {
+        margin: 50px 0 100px 0;
+        padding: 0 10px;
+    }
+
+    /*About-Page---------------------*/
+    .About-photo {
+        width: 30%;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .Fly-brush-size span img {
+        width: 80%;
+        height: auto;
+    }
+
+    /*Fist-Brush---------------------*/
+    /*B-Up*/
+    .a-1 {
+        position: absolute;
+        top: -50px;
+        left: 10px;
+    }
+    /*R-Down*/
+    .a-2 {
+        position: absolute;
+        bottom: 80px;
+        left: -5px;
+    }
+    /*R-Middle right*/
+    .a-3 {
+        position: absolute;
+        top: 100px;
+        right: 0px;
+        text-align: right;
+    }
+    /*B-down right*/
+    .a-4 {
+        z-index: 99;
+        position: absolute;
+        bottom: -50px;
+        right: 10px;
+        text-align: right;
+    }
+    /*Second-block*---------------------*/
+    /*B-Middle*/
+    .b-1 {
+        position: absolute;
+        top: 200px;
+        left: -50px;
+        text-align: left;
+    }
+    /*R-Up*/
+    .b-2 {
+        position: absolute;
+        top: 300px;
+        right: 0px;
+        text-align: right;
+    }
+    /*B-Down right*/
+    .b-3 {
+        z-index: 99;
+        position: absolute;
+        bottom: -100px;
+        right: 300px;
+        text-align: right;
+    }
+
+
+    /*Third-block---------------------*/
+    /*B-Down left*/
+    .c-1 {
+        z-index: 99;
+        position: absolute;
+        top: 700px;
+        left: -10px;
+    }
+    /*T-Middle right*/
+    .c-2 {
+        z-index: 99;
+        position: absolute;
+        top: 500px;
+        right: 100px;
+    }
+    /*R-Up*/
+    .c-3 {
+        position: absolute;
+        top: -50px;
+        left: 100px;
+        text-align: left;
+    }
+    /*XX-Up*/
+    .c-4 {
+        position: absolute;
+        top: 100px;
+        left: 350px;
+        text-align: left;
+    }
+    /*C-Up right*/
+    .c-5 {
+        position: absolute;
+        top: 80px;
+        right: 200px;
+    }
+
+
+    /*Fourth-block---------------------*/
+    /*T-Middle*/
+    .d-1 {
+        position: absolute;
+        top: 100px;
+        left: 300px;
+    }
+    /*R-Left*/
+    .d-2 {
+        z-index: 99;
+        position: absolute;
+        bottom: 550px;
+        left: 0px;
+    }
+    /*B-Right*/
+    .d-3 {
+        position: absolute;
+        top: 500px;
+        right: 0px;
+        text-align: right;
+    }
+
+
+    /*Main-block---------------------*/
+    .Main-block {
+        margin: 0px auto;
+        padding: 70px 100px;
+    }
+    .Main-title {
+        width: 80%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .Subtitle {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    /*Second-Content---------------------*/
+    .Briefly-block {
+        overflow: auto;
+        padding: 60px 60px;
+        border: 2px solid #000;
+    }
+
+
+    .Briefly-box p {
+        width: 100%;
+    }
+    /*About-Page---------------------*/
+    .About-content {
+        width: 100%;
+        padding: 0 80px;
+    }
+    .About-text {
+        width: 450px;
+        height: auto;
+        overflow: auto;
+    }
+    .Name {
+    margin: 15px 0 10px 0;
+}
+}
+
+
+
+@media (max-width: 991px) {
+    .Content-box {
+        height: auto;
+        margin: 20px 30px;
+        padding: 0 0 50px 0;
+    }
+    .Porjects-content-box {
+        margin: 20px 30px;
+    }
+    /*Fist-Brush---------------------*/
+    /*B-Up*/
+    .a-1 {
+        position: absolute;
+        top: -20px;
+        left: 10px;
+    }
+    /*R-Down*/
+    .a-2 {
+        position: absolute;
+        bottom: 80px;
+        left: -5px;
+    }
+    /*R-Middle right*/
+    .a-3 {
+        position: absolute;
+        top: 80px;
+        right: 0px;
+        text-align: right;
+    }
+    /*B-down right*/
+    .a-4 {
+        z-index: 99;
+        position: absolute;
+        bottom: -20px;
+        right: 10px;
+        text-align: right;
+    }
+    /*Second-block*---------------------*/
+    /*B-Middle*/
+    .b-1 {
+        position: absolute;
+        top: 550px;
+        left: -50px;
+        text-align: left;
+    }
+    /*R-Up*/
+    .b-2 {
+        position: absolute;
+        top: 400px;
+        right: 0px;
+        text-align: right;
+    }
+    /*B-Down right*/
+    .b-3 {
+        z-index: 99;
+        position: absolute;
+        bottom: -50px;
+        right: 30px;
+        text-align: right;
+    }
+
+
+    /*Third-block---------------------*/
+    /*B-Down left*/
+    .c-1 {
+        z-index: 99;
+        position: absolute;
+        top: 700px;
+        left: -10px;
+    }
+    /*T-Middle right*/
+    .c-2 {
+        z-index: 99;
+        position: absolute;
+        top: 200px;
+        right: 0px;
+    }
+    /*R-Up*/
+    .c-3 {
+        position: absolute;
+        top: -20px;
+        left: 10px;
+        text-align: left;
+    }
+    /*XX-Up*/
+    .c-4 {
+        position: absolute;
+        top: 100px;
+        left: 50px;
+        text-align: left;
+    }
+    /*C-Up right*/
+    .c-5 {
+        position: absolute;
+        top: 150px;
+        right: 450px;
+    }
+
+
+    /*Fourth-block---------------------*/
+    /*T-Middle*/
+    .d-1 {
+        position: absolute;
+        top: 100px;
+        left: 300px;
+    }
+    /*R-Left*/
+    .d-2 {
+        z-index: 99;
+        position: absolute;
+        bottom: 550px;
+        left: 0px;
+    }
+    /*B-Right*/
+    .d-3 {
+        position: absolute;
+        top: 500px;
+        right: 0px;
+        text-align: right;
+    }
+
+    /*Fist-Content---------------------*/
+    .Fist-Content {
+        height: 600px;
+    }
+    /*Main-Banner---------------------*/
+    .Subtitle {
+            margin: -50px auto;
+        }
+    /*About-Page---------------------*/
+    .About-title{
+        text-align: left;
+        padding:0 100px;
+    }
+    .About-text-block {
+        text-align: center;
+    }
+
+    .About-text {
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        padding: 20px 50px;
+    }
+
+    .About-photo {
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .Fly-brush-size span img {
+        width: 70%;
+        height: auto;
+    }
+    /*About-Page---------------------*/
+  /*  .About-content {
+        width: 100%;
+        padding: 0 30px;
+    }*/
+}
+
+@media (max-width: 480px) {
+
+    body{
+        min-width: 360px;
+    }
+
+    .Content-box {
+        /*height: 500px;*/
+        margin: 20px 10px;
+    }
+
+    .Fly-brush-size span img {
+        width: 50%;
+    }
+
+    /*Fist-Content---------------------*/
+    .Fist-Content {
+        height: 500px;
+    }
+
+    .Main-block {
+        overflow: auto;
+        margin: 20px auto;
+        padding: 30px;
+        border: 2px solid #000;
+    }
+
+    .Main-title {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .Subtitle {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    /*Second-Content---------------------*/
+    .Briefly-block {
+        overflow: auto;
+        padding: 30px 20px;
+        border: 2px solid #000;
+    }
+
+    .Briefly-box h3 {
+        font-size: 24px;
+        margin: 0px 0px 30px 0px;
+    }
+
+    .Briefly-box p {
+        width: 100%;
+        font-size: 13px;
+        margin: 0 auto;
+    }
+
+    .Briefly-box a {
+        margin: 20px 0 20px 0;
+    }
+
+    /*Second-Content---------------------*/
+    .Second-Content {
+        height: auto;
+        padding: 10px;
+    }
+    /*Third-Content---------------------*/
+    .Porjects-content-box {
+        margin: 20px 10px;
+        padding: 0 0 100px 0;
+    }
+
+    .Projects-block {
+        padding: 30px 20px;
+    }
+    /*Footer---------------------*/
+    footer {
+        background-position: initial;
+    }
+    /*About-Page---------------------*/
+    .About-text {
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        padding: 20px 10px;
+    }
+}
+
+
+
+
+
+
