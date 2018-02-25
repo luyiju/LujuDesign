@@ -55,7 +55,7 @@ General Styles
 */
     letter-spacing: 0.01em;
     line-height: 1.7;
-    border: none!important;
+   /* border: none!important;*/
 }
 
 body {
@@ -314,7 +314,7 @@ Modal
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 100;/* Sit on top */
-    padding: 60px; /* Location of the box */
+    padding: 0px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -326,27 +326,43 @@ Modal
 
 /* Modal Content */
 .modal-content {
-    width: 80%;
+    width: 100%;
+    height:800px;
     margin: auto;
     padding: 30px 100px;
-    background-color: #fefefe;
-    border: 1px solid #888;
+    background-color: rgba(0,0,0,0.8);
+    border:none;
+    box-shadow: none;
 }
 
-.modal-text-box h1{
+.P-image-box{
+    border: 1px solid #000;
+}
+.P-imfo-box{
+    border: 1px solid #000;
+}
+
+.P-imfo-box h3{
     color: #ff432e;
 }
 
-.modal-text-box span{
+.P-imfo-box span{
     margin: 50px auto;
-    font-size: 20px;
+    font-size: 15px;
 }
 
-.modal-text {
-    color: #333;
+.P-imfo-box ul{
+    margin: 10px auto;
+    font-size: 13px;
+    color: #fff;
 }
+
 
 /* The Close Button */
+.close-block{
+    margin: 30px auto;
+}
+
 .close {
     color: #333;
     float: right;
@@ -360,8 +376,20 @@ Modal
     text-decoration: none;
     cursor: pointer;
 }
-
-
+/* owl
+============================================= */
+#owl-demo {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#owl-demo .item {
+    display: block;
+}
+#owl-demo img {
+    display: block;
+    width: 100%;
+}
 
 /* ------------------------------------------------------------------
 Site Navigation
@@ -772,7 +800,7 @@ Site Navigation
 ============================================= */
 
 .Skill-box {
-    margin: 50px auto;
+    margin: 100px auto;
     padding: 0 100px;
     overflow: auto;
 }
@@ -1104,6 +1132,31 @@ RWD
         .Content-box {
             min-height: 950px;
         }
+
+        /*Second-Content---------------------*/
+        .Skill-box {
+            margin: 200px auto;
+        }
+        
+        /*About-Page---------------------*/
+        .About-content {
+            width: 1200px;
+            height: auto;
+            margin: 0px auto;
+            padding: 0px;
+            overflow: auto;
+            border: 2px solid #f00;
+        }
+        .About-text {
+            width: 700px;
+            height: auto;
+            overflow: auto;
+        }
+
+        .Experience-box {
+            margin: 40px auto;
+        }
+
 }
 
 @media (max-width: 1400px) {}
@@ -1563,6 +1616,14 @@ RWD
         padding: 20px 5px;
     }
 }
+
+
+
+
+
+
+
+
 
 
 
