@@ -55,7 +55,7 @@ General Styles
 */
     letter-spacing: 0.01em;
     line-height: 1.7;
-   /* border: none!important;*/
+    border: none!important;
 }
 
 body {
