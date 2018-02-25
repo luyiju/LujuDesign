@@ -7,8 +7,8 @@ function subSomething() {
     //當頁面加載狀態
     if (document.readyState == "complete") {
         //延遲一秒關閉loading
-        $('#loading_all').delay(1300).hide(0);
-        $('.spinner').delay(1300).fadeOut('slow');
+        $('#loading_all').delay(1000).hide(0);
+        $('.spinner').delay(1000).fadeOut('slow');
     }
 }
 
@@ -77,4 +77,26 @@ $(window).load(function() {
 
 // ====================================Projects Modal=========================================================================
 
+$(function() {
+  //----- OPEN
+  $('[data-popup-open]').on('click', function(e) {
+    var targeted_popup_class = jQuery(this).attr('data-popup-open');
+    $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
 
+    e.preventDefault();
+  });
+
+  //----- CLOSE
+  $('[data-popup-close]').on('click', function(e) {
+    var targeted_popup_class = jQuery(this).attr('data-popup-close');
+    $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+
+    e.preventDefault();
+  });
+});
+
+$(".popup").on("show", function () {
+  $("body").addClass("modal-open");
+}).on("hidden", function () {
+  $("body").removeClass("modal-open")
+});
