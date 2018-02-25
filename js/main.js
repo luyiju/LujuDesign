@@ -1,4 +1,5 @@
 
+
 // Loading
 document.onreadystatechange = subSomething;
 
@@ -6,8 +7,8 @@ function subSomething() {
     //當頁面加載狀態
     if (document.readyState == "complete") {
         //延遲一秒關閉loading
-        $('#loading_all').delay(1300).hide(0);
-        $('.spinner').delay(1300).fadeOut('slow');
+        $('#loading_all').delay(1000).hide(0);
+        $('.spinner').delay(1000).fadeOut('slow');
     }
 }
 
@@ -27,7 +28,7 @@ function myFunction(e) {
 }
 
 //解除触摸锁定  
-document.removeEventListener("touchmove", myFunction); 
+document.removeEventListener("touchmove", myFunction);
 
 // Menu Bar
 function openNav() {
@@ -41,7 +42,6 @@ $('#toggle').click(function() {
     $(this).toggleClass('active');
     $('#overlay').toggleClass('open');
 });
-
 
 
 // Projects-filter
@@ -73,82 +73,30 @@ $(window).load(function() {
     });
 });
 
+
+
 // ====================================Projects Modal=========================================================================
-// ======Website===============/////////
-// Lime-Get the modal
-var modal = document.getElementById('LimeModal');
 
-// Get the button that opens the modal
-var btn = document.getElementById("Lime");
+$(function() {
+  //----- OPEN
+  $('[data-popup-open]').on('click', function(e) {
+    var targeted_popup_class = jQuery(this).attr('data-popup-open');
+    $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+    e.preventDefault();
+  });
 
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+  //----- CLOSE
+  $('[data-popup-close]').on('click', function(e) {
+    var targeted_popup_class = jQuery(this).attr('data-popup-close');
+    $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
+    e.preventDefault();
+  });
+});
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-// Starts-Get the modal
-// var modal = document.getElementById('StarsModal');
-
-// // Get the button that opens the modal
-// var btn = document.getElementById("Starts");
-
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-
-// // When the user clicks the button, open the modal
-// btn.onclick = function() {
-//     modal.style.display = "block";
-// }
-
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
-
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
-// ======Art Work===============/////////
-// Night-Get the modal
-// var modal = document.getElementById('NightModal');
-
-// // Get the button that opens the modal
-// var btn = document.getElementById("Night");
-
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-
-// // When the user clicks the button, open the modal
-// btn.onclick = function() {
-//     modal.style.display = "block";
-// }
-
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
-
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
+$(".popup").on("show", function () {
+  $("body").addClass("modal-open");
+}).on("hidden", function () {
+  $("body").removeClass("modal-open")
+});
