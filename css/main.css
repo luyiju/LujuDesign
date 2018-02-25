@@ -314,7 +314,7 @@ Modal
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 100;/* Sit on top */
-    padding: 0px; /* Location of the box */
+    padding: 20px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -327,7 +327,7 @@ Modal
 /* Modal Content */
 .modal-content {
     width: 100%;
-    height:800px;
+    height:auto;
     margin: auto;
     padding: 30px 100px;
     background-color: rgba(0,0,0,0.8);
@@ -336,10 +336,10 @@ Modal
 }
 
 .P-image-box{
-    border: 1px solid #000;
+    border: 1px solid #fff;
 }
 .P-imfo-box{
-    border: 1px solid #000;
+    border: 1px solid #fff;
 }
 
 .P-imfo-box h3{
