@@ -12,9 +12,11 @@
     <meta property="og:title" content="Luju's Design" />
     <meta name="og:description" content="Luju-A Web Desiner" />
     <!-- favicon -->
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="bookmark" href="/favicon.ico" />
+    <link rel="shortcut icon" href="./image/favicon.ico">
+    <link rel="bookmark" href="./image/favicon.ico">
     <title>Luju-A Web Desiner</title>
+    <!-- normalize -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <!-- Main Style -->
@@ -22,7 +24,20 @@
     <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
 </head>
 
-<body>
+<body class="scoll_dis">
+    <!-- Loading Start -->
+    <div id="loading_all" class="">
+        <div class="spinner">
+            <div class="loader-inner line-scale-pulse-out-rapid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <!-- Loading End -->
     <!-- Main Banner Start -->
     <header class="Block1-bg Fly-brush-size">
         <!-- Fly brush1 Start -->
@@ -52,17 +67,17 @@
                             <div>
                                 <ul class="Social-icon">
                                     <!--                         <li>
-											<address><a href="mailto:crystallu00421@gmail.com" target="_blank">
-											<img src="image/Email.svg"></a>
-										</address>
-									</li> -->
+                                            <address><a href="mailto:crystallu00421@gmail.com" target="_blank">
+                                            <img src="image/Email.svg"></a>
+                                        </address>
+                                    </li> -->
                                     <li>
                                         <a href="https://www.facebook.com/crystallu00421" target="_blank">
-										<img src="image/Fb.svg"></a>
+                                        <img src="image/Fb.svg"></a>
                                     </li>
                                     <li>
                                         <a href="https://www.linkedin.com/in/luju-design" target="_blank">
-										<img src="image/Linkdin.svg"></a>
+                                        <img src="image/Linkdin.svg"></a>
                                     </li>
                                     <!-- <li><img src="image/Medium.svg"></li> -->
                                 </ul>
@@ -152,8 +167,8 @@
                     <div class="Projects-menu ">
                         <div class="col-lg-12 ">
                             <div class="Projects-filter ">
-                                <a href="# " data-filter="* " class="current ">All Categories</a>
-                                <a href="# " data-filter=".web ">Web Design</a>
+                                <a href="# " data-filter="* " class="current ">All</a>
+                                <a href="# " data-filter=".web">Web Design</a>
                                 <a href="# " data-filter=".visual ">Visual Design</a>
                                 <a href="# " data-filter=".Art ">Art Work</a>
                                 <br class="clearfix ">
@@ -163,33 +178,82 @@
                     <!-- Projects-menu End -->
                     <!--//PROJECTS CONTAINER START//////////////////////////////////////-->
                     <div class="Projects-container">
+                        <!--//WEB DESIGN START -->
+                        <!-- Howard Start -->
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 Projects-item web ">
+                            <img src="image/Projects/Web/Howard.jpg ">
+                            <div id="Howard" class="Projects-cover">
+                                <h2>福華大飯店</h2>
+                                <p>Booking system</p>
+                                <p>案件進行中</p>
+                            </div>
+                        </div>
+                        <!-- Howard End -->
+                        <!-- 368 Start -->
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 Projects-item web ">
+                            <img src="image/Projects/Web/368.jpg ">
+                            <div id="368" class="Projects-cover">
+                                <h2>368餐飲</h2>
+                                <p>Official website</p>
+                            </div>
+                        </div>
+                        <!-- 368 End -->
                         <!-- Lime Start -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 Projects-item web ">
                             <img src="image/Projects/Web/Lime.jpg ">
                             <div id="Lime" class="Projects-cover">
                                 <h2>欣格林</h2>
-                                <p>Official website</p>
+                                <p>E-commerce website</p>
                             </div>
                         </div>
                         <!-- Lime End -->
-                        <!-- Kudos Start -->
+                        <!-- Baiko Start -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 Projects-item web ">
-                            <div id="Kudos" class="Projects-cover ">
-                                <h2>Kudos</h2>
+                            <img src="image/Projects/Web/Baiko.jpg ">
+                            <div id="Baiko" class="Projects-cover">
+                                <h2>Baiko</h2>
                                 <p>Official website</p>
                             </div>
-                            <img src="image/Projects/Web/Kudos.jpg">
                         </div>
-                        <!-- Kudos End -->
+                        <!-- Baiko End -->
+                        <!-- Keydex Start -->
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 Projects-item web ">
+                            <div id="Keydex" class="Projects-cover ">
+                                <h2>Keydex</h2>
+                                <p>Official website</p>
+                            </div>
+                            <img src="image/Projects/Web/Keydex.jpg">
+                        </div>
+                        <!-- Keydex End -->
                         <!-- Teas Start -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 Projects-item web ">
                             <div id="Teas" class="Projects-cover ">
                                 <h2>茶哲</h2>
-                                <p>Official website</p>
+                                <p>E-commerce website</p>
                             </div>
                             <img src="image/Projects/Web/Teas.jpg">
                         </div>
                         <!-- Teas End -->
+                        <!-- KuDos Start -->
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 Projects-item web ">
+                            <div id="KuDos" class="Projects-cover ">
+                                <h2>KuDos</h2>
+                                <p>E-commerce website</p>
+                            </div>
+                            <img src="image/Projects/Web/KuDos.jpg">
+                        </div>
+                        <!-- Keydex End -->
+                        <!-- Enjoy Start -->
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 Projects-item web ">
+                            <div id="Enjoy" class="Projects-cover ">
+                                <h2>Enjoy</h2>
+                                <p>Official website</p>
+                            </div>
+                            <img src="image/Projects/Web/Enjoy.jpg">
+                        </div>
+                        <!-- Keydex End -->
+                        <!--//WEB DESIGN END -->
+                        <!--//VISUAL DESIGN START -->
                         <!-- Stars Start -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 Projects-item visual ">
                             <div id="Starts" class="Projects-cover ">
@@ -199,6 +263,8 @@
                             <img src="image/Projects/Visaul/星探.jpg ">
                         </div>
                         <!-- Stars End -->
+                        <!--//VISUAL DESIGN END -->
+                        <!--//ART WORK START -->
                         <!-- Freeze1 Start -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 Projects-item Art ">
                             <div id="Freeze1" class="Projects-cover ">
@@ -244,6 +310,7 @@
                             <img src="image/Projects/Art/風景畫.jpg ">
                         </div>
                         <!-- Night End -->
+                        <!--//ART WORK END -->
                     </div>
                     <!-- Projects-container End -->
                     <!--//PROJECTS CONTAINER END//////////////////////////////////////-->
@@ -271,17 +338,17 @@
                 <div>
                     <ul class="Social-icon ">
                         <!--                         <li>
-									<address><a href="mailto:crystallu00421@gmail.com " target="_blank ">
-										<img src="image/Email.svg "></a>
-						</address>
-					</li> -->
+                                    <address><a href="mailto:crystallu00421@gmail.com " target="_blank ">
+                                        <img src="image/Email.svg "></a>
+                        </address>
+                    </li> -->
                         <li>
                             <a href="https://www.facebook.com/crystallu00421 " target="_blank ">
-						<img src="image/Fb.svg "></a>
+                        <img src="image/Fb.svg "></a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/in/luju-design " target="_blank ">
-						<img src="image/Linkdin.svg "></a>
+                        <img src="image/Linkdin.svg "></a>
                         </li>
                         <!-- <li><img src="image/Medium.svg "></li> -->
                     </ul>
@@ -301,12 +368,13 @@
     <div id="LimeModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
-        	<span class="close">&times;</span>
+            <span class="close">&times;</span>
             <div class="modal-text-box">
                 <h1>欣格林 <span>Lime</span></h1>
                 <p class="modal-text">
-                    Type：E-commerce website <br> 
-                    負責網站視覺設計與程式撰寫<br>
+                    Type：E-commerce website
+                    <br> 負責網站視覺設計與程式撰寫
+                    <br>
                     <img src="image/Projects/Web/Lime/index.jpg">
                 </p>
             </div>
@@ -353,5 +421,5 @@
 <!-- Main -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="https://isotope.metafizzy.co/v1/jquery.isotope.min.js"></script>
-<script src="js/main.js "></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script src="js/main.js "></script>
