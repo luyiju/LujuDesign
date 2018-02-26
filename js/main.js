@@ -7,8 +7,8 @@ function subSomething() {
     //當頁面加載狀態
     if (document.readyState == "complete") {
         //延遲一秒關閉loading
-        $('#loading_all').delay(1000).hide(0);
-        $('.spinner').delay(1000).fadeOut('slow');
+        $('#loading_all').delay(800).hide(0);
+        $('.spinner').delay(800).fadeOut('slow');
     }
 }
 
