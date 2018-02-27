@@ -20,6 +20,7 @@ $(window).load(function() {
     }, 300);
 });
 
+
 //阻止触摸事件  
 document.addEventListener("touchmove", myFunction);
 
@@ -93,10 +94,10 @@ $(function() {
 
     e.preventDefault();
   });
-});
-
-$(".popup").on("show", function () {
-  $("body").addClass("modal-open");
-}).on("hidden", function () {
-  $("body").removeClass("modal-open")
+        $(document).on('click','.Projects-cover',function(){
+            $('body').css('overflow', 'hidden');
+        });
+         $(document).on('click','.popup-close',function(){
+            $('body').css('overflow', 'auto');
+        });
 });
