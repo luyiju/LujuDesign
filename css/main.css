@@ -614,7 +614,7 @@ Site Navigation
 }
 
 .Bg-4 {
-    background: url(../image/Bg-4.jpg);
+    background:url(../image/Bg-4.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -1091,7 +1091,7 @@ About Page
 .About-content-box{
     height: auto;
     margin: 50px 50px;
-    background: #fdde40;
+    /*background: #fdde40;*/
     box-shadow: 0 2px 20px 0 #c1c0c0;
 }
 
@@ -1132,6 +1132,10 @@ About Page
     width: 500px;
     height: auto;
     overflow: auto;
+}
+
+.About-text h4{
+    color: #ff432e;
 }
 
 .About-photo {
@@ -1209,10 +1213,15 @@ RWD
         .Content-box {
             min-height: 950px;
         }
+
+        .Subtitle {
+
+            font-size: 40px;
+        }
+
         .About-content-box{
             height: auto;
             margin: 50px 50px;
-            background: #fdde40;
             box-shadow: 0 2px 20px 0 #c1c0c0;
         }
 
