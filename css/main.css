@@ -51,8 +51,7 @@ General Styles
 ------------------------------------------------------------------ */
 
 * {
-    /*    font-family: 'Open Sans', sans-serif;
-*/
+    font-family: Open Sans,Microsoft JhengHei;
     letter-spacing: 0.01em;
     line-height: 1.7;
     border: none!important;
@@ -1135,7 +1134,7 @@ About Page
 }
 
 .About-text-block h4{
-    font-family: Moon;
+    font-family: Moon,Nunito;
     font-weight: 700;
 }
 
@@ -1472,6 +1471,15 @@ RWD
     .Porjects-content-box {
         margin: 20px 30px;
     }
+
+    .About-content-box {
+        margin: 20px 30px;
+        padding: 0px 0px 20px 0;
+    }
+
+    .Block4-bg {
+        background-position: inherit;
+    }
     /*Fist-Brush---------------------*/
     /*B-Up*/
     .a-1 {
@@ -1673,6 +1681,12 @@ RWD
         /*height: 500px;*/
         margin: 20px 10px;
     }
+
+    .About-content-box {
+        margin: 20px 10px;
+        padding: 0px 0px 20px 0;
+    }
+
 
     .Fly-brush-size span img {
         width: 50%;
