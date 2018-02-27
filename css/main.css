@@ -322,7 +322,12 @@ Buttons
     white-space: nowrap;
 }
 .status-mark2{
-    
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: 1px solid #ff432e!important;
+    color: #ff432e;
+    white-space: nowrap;
 } 
 
 /* ------------------------------------------------------------------
@@ -1091,6 +1096,7 @@ About Page
 .About-content-box{
     height: auto;
     margin: 50px 50px;
+    padding: 0px 0px 20px 0;
     /*background: #fdde40;*/
     box-shadow: 0 2px 20px 0 #c1c0c0;
 }
@@ -1128,14 +1134,19 @@ About Page
     color: #ff432e;
 }
 
+.About-text-block h4{
+    font-family: Moon;
+    font-weight: 700;
+}
+
+.About-text-block li{
+    color: #222;
+}
+
 .About-text {
     width: 500px;
     height: auto;
     overflow: auto;
-}
-
-.About-text h4{
-    color: #ff432e;
 }
 
 .About-photo {
@@ -1178,6 +1189,10 @@ About Page
 Helper Classes
 ------------------------------------------------------------------ */
 
+.text-red{
+    color: #ff432e;
+}
+
 
 /* Margin
 ============================================= */
@@ -1186,7 +1201,9 @@ Helper Classes
     margin: 0 0 !important;
 }
 
-
+.m-10{
+    margin:10px 0 !important;
+}
 
 
 /* Text Alignment
@@ -1728,7 +1745,7 @@ RWD
     /*About-Page---------------------*/
     .About-content {
         width: 100%;
-        padding: 0 10px;
+        padding: 0px 10px 10px 10px;
     }
     .About-text {
         width: 100%;
