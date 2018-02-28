@@ -3,21 +3,21 @@
 // Loading
 document.onreadystatechange = subSomething;
 
-function subSomething() {
-    //當頁面加載狀態
-    if (document.readyState == "complete") {
-        //延遲一秒關閉loading
-        $('#loading_all').delay(100).hide(0);
-        $('.spinner').delay(100).fadeOut('slow');
-    }
-}
+// function subSomething() {
+//     //當頁面加載狀態
+//     if (document.readyState == "complete") {
+//         //延遲一秒關閉loading
+//         $('#loading_all').delay(100).hide(0);
+//         $('.spinner').delay(100).fadeOut('slow');
+//     }
+// }
 
 
 $(window).load(function() {
-    $('#loading_all').delay(300).hide(0);
+    $('#loading_all').delay(100).hide(0);
     setTimeout(function() {
         $('body').removeClass("scoll_dis");
-    }, 300);
+    }, 100);
 });
 
 
