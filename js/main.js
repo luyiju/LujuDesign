@@ -7,18 +7,18 @@ function subSomething() {
     //當頁面加載狀態
     if (document.readyState == "complete") {
         //延遲一秒關閉loading
-        $('#loading_all').delay(0).hide(0);
-        $('.spinner').delay(0).fadeOut('slow');
+        $('#loading_all').delay(100).hide(0);
+        $('.spinner').delay(100).fadeOut('slow');
     }
 }
 
 
-$(window).load(function() {
-    $('#loading_all').delay(100).hide(0);
-    setTimeout(function() {
-        $('body').removeClass("scoll_dis");
-    }, 100);
-});
+// $(window).load(function() {
+//     $('#loading_all').delay(100).hide(0);
+//     setTimeout(function() {
+//         $('body').removeClass("scoll_dis");
+//     }, 100);
+// });
 
 
 //阻止触摸事件  
