@@ -94,6 +94,15 @@ button {
     -moz-osx-font-smoothing: grayscale;
 }
 
+a{
+    color: #ff432e;
+    cursor: pointer;
+}
+
+a:hover{
+    color: #fff;
+}
+
 a:focus {
     outline: 0;
 }
@@ -378,7 +387,7 @@ Modal
 
 .P-imfo-box span{
     font-size: 12px;
-    color: #000;
+    color: #fff;
 }
 
 .P-imfo-box ul{
@@ -797,8 +806,8 @@ Site Navigation
 }
 
 .Subtitle {
-    margin: 200px 0;
-    font-family: Moon, Nunito;
+    margin: 150px 0;
+    font-family:Nunito,Moon;
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 2.4px;
@@ -808,7 +817,9 @@ Site Navigation
     border: 1px solid #222;
 }
 
-
+.Subtitle p{
+    font-family:Nunito,Moon;    
+}
 
 
 
